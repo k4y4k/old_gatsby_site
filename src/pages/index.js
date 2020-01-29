@@ -1,6 +1,4 @@
 import React from 'react'
-import '../global.css'
-import Particles from 'react-particles-js'
 import { Helmet } from 'react-helmet'
 
 export default () => (
@@ -9,17 +7,10 @@ export default () => (
       <html lang="en" amp />
       <meta charSet="utf-8" />
       <title>{'Coming Soon | <kayak />'}</title>
-      <link rel="canonical" href="http://mysite.com/example" />
+      <link rel="canonical" href="https://kayak.rocks" />
     </Helmet>
-    <Particles className="particles" />
     <div id="container">
-      <div id="content">
-        <p>Coming soon: your new favourite web developer and designer</p>
-        <h1>
-          <span className="fade">{'<'}</span>kayak
-          <span className="fade">{'/>'}</span>
-        </h1>
-      </div>
+      <h1>scandinavian cowboy says: hjowddie world</h1>
     </div>
   </>
 )
