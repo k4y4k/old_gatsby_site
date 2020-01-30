@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import '../styles/tailwind.css'
 
 export default () => (
   <>
@@ -10,7 +11,7 @@ export default () => (
       <link rel="canonical" href="https://kayak.rocks" />
     </Helmet>
     <div id="container">
-      <h1>scandinavian cowboy says: hjowddie world</h1>
+      <h1 className="bg-grey-200">scandinavian cowboy says: hjowddie world</h1>
     </div>
   </>
 )
