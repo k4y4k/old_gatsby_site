@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import '../styles/tailwind.css'
+import '../styles/fonts.scss'
 
 export default () => (
   <>
