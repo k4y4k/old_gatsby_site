@@ -1,2 +1,9 @@
 @import '../fonts/Inter/inter.css';
 @import '../fonts/IosevkaTypeSS02/webfont.css';
+
+pre,
+code,
+kbd,
+ruby {
+  @apply font-mono;
+}
