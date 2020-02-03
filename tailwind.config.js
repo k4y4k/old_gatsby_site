@@ -1,18 +1,6 @@
 module.exports = {
   theme: {
     fontFamily: {
-      sans: [
-        'Inter',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        'Segoe UI',
-        'Roboto',
-        'Ubuntu',
-        'Cantarell',
-        'Open Sans',
-        'Helvetica Neue',
-        'sans-serif'
-      ],
       mono: [
         'Iosevka Type SS02 Web',
         'SFMono-Regular',
@@ -21,7 +9,7 @@ module.exports = {
         'Courier',
         'monospace'
       ],
-      body: [
+      sans: [
         'Inter',
         '-apple-system',
         'BlinkMacSystemFont',

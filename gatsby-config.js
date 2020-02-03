@@ -1,5 +1,11 @@
 module.exports = {
   plugins: [
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        class: 'font-sans'
+      }
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-postcss`,
@@ -9,7 +15,8 @@ module.exports = {
         printRejected: true,
         develop: process.env.NODE_ENV === 'development' ? true : false,
         tailwind: true,
-        verbose: true
+        verbose: true,
+        whitelist: ['font-mono', 'font-sans']
       }
     },
     {
