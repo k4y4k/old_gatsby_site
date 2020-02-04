@@ -4,6 +4,46 @@ describe('The site in general', () => {
   it('loads with 0 tanties', () => {
     cy.visit('/')
   })
+
+  it('has a projects section', () => {
+    cy.get('#projects')
+  })
+})
+
+describe('Projects', () => {
+  it('has at least 1 visible project', () => {
+    cy.get('.project-card')
+  })
+
+  describe('Project cards', () => {
+    it('should have an image, a title, a desciption', () => {
+      cy.get('.project-card').then(x => {
+        // FIXME: probably better way to do this
+        cy.wrap(x)
+          .find('img')
+          .parent()
+          .find('hr')
+          .parent()
+          .find('h2')
+          .parent()
+          .find('p')
+      })
+    })
+
+    it('should have one or more buttons that go to some code or a live demo or both', () => {
+      cy.get('.project-card').then(x => {
+        cy.wrap(x)
+          .find('a')
+          .then(y => {
+            cy.wrap(y)
+              .should('have.attr', 'href')
+              .then(href => {
+                cy.visit(href)
+              })
+          })
+      })
+    })
+  })
 })
 
 describe('Hero', () => {
