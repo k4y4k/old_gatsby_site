@@ -52,20 +52,18 @@ describe('Hero', () => {
   })
 
   describe('the nav', () => {
-    it('has 3 links', () => {
+    it('has links', () => {
       cy.get('#hero-nav > ul')
         .children()
-        .should('have.length', 3)
+        .should('have.length.gte', 0)
     })
 
-    it('has a button as the last link', () => {
-      cy.get('li:last-of-type')
-        .should('have.css', 'border-radius')
-        .and('match', /px/)
-
-      cy.get('li:last-of-type')
-        .should('have.css', 'background-color')
-        .and('match', /rgba/)
+    it('has a hire button as the last link', () => {
+      cy.get('li:last-of-type').then(lastEl => {
+        cy.wrap(lastEl)
+          .contains(/hire/i)
+          .and('has.css', 'background-color')
+      })
     })
 
     it('changes on hover', () => {
