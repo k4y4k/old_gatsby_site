@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import '../styles/tailwind.css'
 import '../styles/fonts.scss'
 import Hero from '../components/Hero/Hero'
+import Projects from '../components/Projects/Projects'
 
 export default () => (
   <>
@@ -16,7 +17,7 @@ export default () => (
       <Hero></Hero>
     </header>
     <main>
-      
+      <Projects></Projects>
     </main>
   </>
 )
