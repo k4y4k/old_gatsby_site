@@ -4,7 +4,7 @@ import BlogTitle from './Type/BlogTitle'
 
 const placeholderImg = 'https://picsum.photos/225/400'
 
-const FeaturedPostImage = styled.aside`
+const FeaturedPostImage = styled.span`
   background-image: url(${placeholderImg});
   max-width: 20vw;
   height: auto;

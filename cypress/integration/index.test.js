@@ -18,7 +18,7 @@ describe('Blog Section', function() {
   it('has a featured post, with a title, an image, and a link to read it', () => {
     cy.get('#featured-blog-post').then(post => {
       cy.wrap(post)
-        .find('aside')
+        .find('span')
         .parent()
         .find('div')
         .parent()
