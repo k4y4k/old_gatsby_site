@@ -18,7 +18,7 @@ describe('Blog Section', function() {
   it('has a featured post, with a title, an image, and a link to read it', () => {
     cy.get('#featured-blog-post').then(post => {
       cy.wrap(post)
-        .find('img')
+        .find('aside')
         .parent()
         .find('div')
         .parent()
@@ -29,21 +29,6 @@ describe('Blog Section', function() {
         .find('a')
     })
   })
-
-  // OPTIONALLY blog roll with < 5 posts
-  // have no images
-
-  // it('should also have a short blogroll', () => {
-  //   cy.get('#blogroll').then(blogroll => {
-  //     cy.wrap(blogroll)
-  //       .children()
- 
-  //       .should('have.length.lt', 5)
-  //       .and('have.length.gt', 0)
-
-       
-  //   })
-  // })
 })
 
 describe('Projects', () => {
@@ -113,13 +98,13 @@ describe('Hero', () => {
   })
 })
 
-// describe('Accessibility checks', () => {
-//   beforeEach(() => {
-//     cy.visit('/')
-//     cy.injectAxe()
-//     cy.wait(500)
-//   })
-//   it('Has no detectable a11y violations on load', () => {
-//     cy.checkA11y()
-//   })
-// })
+describe('Accessibility checks', () => {
+  beforeEach(() => {
+    cy.visit('/')
+    cy.injectAxe()
+    cy.wait(500)
+  })
+  it('Has no detectable a11y violations on load', () => {
+    cy.checkA11y()
+  })
+})

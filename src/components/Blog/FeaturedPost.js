@@ -4,7 +4,7 @@ import BlogTitle from './Type/BlogTitle'
 
 const placeholderImg = 'https://picsum.photos/225/400'
 
-const FeaturedPostImage = styled.div`
+const FeaturedPostImage = styled.aside`
   background-image: url(${placeholderImg});
   max-width: 20vw;
   height: auto;
@@ -24,11 +24,7 @@ const FeaturedPost = ({ className, children }) => {
       id="featured-blog-post"
       className={`${className} flex justify-center mx-auto`}
     >
-      <FeaturedPostImage
-        src={placeholderImg}
-        alt=""
-        className="rounded-lg m-2"
-      />
+      <FeaturedPostImage className="rounded-lg m-2" />
 
       <FeaturedPostWords className="flex flex-col justify-flex-start text-left m-2 p-2">
         <BlogTitle></BlogTitle>
