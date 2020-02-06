@@ -4,6 +4,7 @@ import '../styles/tailwind.css'
 import '../styles/fonts.scss'
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
+import Blog from '../components/Blog/Blog'
 
 export default () => (
   <>
@@ -18,6 +19,8 @@ export default () => (
     </header>
     <main>
       <Projects></Projects>
+
+      <Blog></Blog>
     </main>
   </>
 )

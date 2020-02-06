@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Button from '../../general/Button'
 
 const placeholderImg = 'https://i.picsum.photos/id/216/400/225.jpg'
 
@@ -23,18 +24,8 @@ const ProjectCard = ({ className, children }) => {
         consequatur sed corrupti corporis laudantium in voluptatibus quos
         asperiores? Odio totam possimus repellat.
       </p>
-      <a
-        href=""
-        className="uppercase font-mono text-purple-600 p-2 m-1 border-purple-600 border-solid border inline-block"
-      >
-        button; it goes somewhere else
-      </a>
-      <a
-        className="uppercase font-mono text-purple-600 p-2 m-1 border-purple-600 border-solid border inline-block"
-        href=""
-      >
-        and another one
-      </a>
+      <Button>button; it goes somewhere else</Button>
+      <Button>and another one</Button>
     </div>
   )
 }

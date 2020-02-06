@@ -8,6 +8,38 @@ describe('The site in general', () => {
   it('has a projects section', () => {
     cy.get('#projects')
   })
+
+  it('has a blog section', () => {
+    cy.get('#blog')
+  })
+})
+
+describe('Blog Section', function() {
+  it('has a featured post, with a title, an image, and a link to read it', () => {
+    cy.get('#featured-blog-post').then(post => {
+      cy.wrap(post)
+        .find('span')
+        .parent()
+        .find('div')
+        .parent()
+        .find('h2')
+        .parent()
+        .find('p')
+        .parent()
+        .find('a')
+    })
+  })
+
+describe("Blogroll",()=>{
+
+it("exists and has at least one child",()=>{
+cy.get("#blogroll").children().should("have.length.gte",1) 
+
+ })
+
+})
+
+
 })
 
 describe('Projects', () => {
