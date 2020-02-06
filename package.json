@@ -33,7 +33,9 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "1.7.0",
     "gh-pages": "2.2.0",
+    "husky": "4.2.1",
     "prettier": "1.19.1",
+    "pretty-quick": "2.0.1",
     "start-server-and-test": "1.10.8"
   },
   "scripts": {
@@ -47,5 +49,10 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "deploy": "gatsby build && gh-pages -d public -b master"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
