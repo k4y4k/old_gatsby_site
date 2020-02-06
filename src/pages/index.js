@@ -1,10 +1,10 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import '../styles/tailwind.css'
-import '../styles/fonts.scss'
-import Hero from '../components/Hero/Hero'
-import Projects from '../components/Projects/Projects'
-import Blog from '../components/Blog/Blog'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import '../styles/tailwind.css';
+import '../styles/fonts.scss';
+import Hero from '../components/Hero/Hero';
+import Projects from '../components/Projects/Projects';
+import Blog from '../components/Blog/Blog';
 
 export default () => (
   <>
@@ -15,12 +15,12 @@ export default () => (
         <title>{'Coming Soon | <kayak />'}</title>
         <link rel="canonical" href="https://kayak.rocks" />
       </Helmet>
-      <Hero></Hero>
+      <Hero />
     </header>
     <main>
-      <Projects></Projects>
+      <Projects />
 
-      <Blog></Blog>
+      <Blog />
     </main>
   </>
-)
+);
