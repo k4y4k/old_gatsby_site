@@ -37,8 +37,10 @@
     "eslint-plugin-react-hooks": "1.7.0",
     "gh-pages": "2.2.0",
     "husky": "4.2.1",
+    "lint-staged": "10.0.7",
     "prettier": "1.19.1",
-    "pretty-quick": "2.0.1",
+    "prettier-eslint": "9.0.1",
+    "prettier-eslint-cli": "5.0.0",
     "start-server-and-test": "1.10.8"
   },
   "scripts": {
@@ -52,11 +54,19 @@
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
     "deploy": "gatsby build && gh-pages -d public -b master",
-    "commit": "commit"
+    "commit": "commit",
+    "format": "prettier-eslint \"src/**/*.js\""
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "prettier-eslint --config .prettierrc.json --write",
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "lint-staged"
     }
   }
 }
