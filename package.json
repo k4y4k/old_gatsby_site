@@ -21,6 +21,9 @@
     "tailwindcss": "1.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@commitlint/prompt-cli": "8.3.5",
     "@testing-library/cypress": "5.2.1",
     "axe-core": "3.4.1",
     "cypress": "3.8.3",
@@ -48,7 +51,8 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "commit": "commit"
   },
   "husky": {
     "hooks": {
