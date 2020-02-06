@@ -3,31 +3,54 @@ import styled from 'styled-components'
 import BlogTitle from './Type/BlogTitle'
 import Button from '../general/Button'
 
-const placeholderImg = 'https://picsum.photos/225/400'
+const placeholderImg = 'https://picsum.photos/700/700'
 
 const FeaturedPostImage = styled.span`
   background-image: url(${placeholderImg});
-  max-width: 20vw;
   height: auto;
   flex-grow: 1;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 100vw;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    height: 33vh;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 20vw;
+  }
 `
 
 const FeaturedPostWords = styled.div`
-  max-width: 33vw;
+  max-width: 100vw;
+
+  @media (min-width: 768px) {
+    max-width: 33vw;
+  }
+`
+
+const FeaturedPostWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: row;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `
 
 const FeaturedPost = ({ className, children }) => {
   return (
-    <div
-      id="featured-blog-post"
-      className={`${className} flex justify-center mx-auto`}
-    >
+    <FeaturedPostWrapper id="featured-blog-post">
       <FeaturedPostImage className="rounded-lg m-2" />
 
-      <FeaturedPostWords className="flex flex-col justify-flex-start text-left m-2 p-2">
+      <FeaturedPostWords
+        className={'flex flex-col justify-flex-start text-left m-2 p-2'}
+      >
         <BlogTitle>
           Really, really long blog post title 2: revenge of the sith 4:
           awakening in 3d
@@ -41,7 +64,7 @@ const FeaturedPost = ({ className, children }) => {
         </p>
         <Button>read more >></Button>
       </FeaturedPostWords>
-    </div>
+    </FeaturedPostWrapper>
   )
 }
 
