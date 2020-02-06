@@ -29,6 +29,17 @@ describe('Blog Section', function() {
         .find('a')
     })
   })
+
+describe("Blogroll",()=>{
+
+it("exists and has at least one child",()=>{
+cy.get("#blogroll").children().should("have.length.gte",1) 
+
+ })
+
+})
+
+
 })
 
 describe('Projects', () => {

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import BlogTitle from './Type/BlogTitle'
+import Button from '../general/Button'
 
 const placeholderImg = 'https://picsum.photos/225/400'
 
@@ -27,7 +28,10 @@ const FeaturedPost = ({ className, children }) => {
       <FeaturedPostImage className="rounded-lg m-2" />
 
       <FeaturedPostWords className="flex flex-col justify-flex-start text-left m-2 p-2">
-        <BlogTitle></BlogTitle>
+        <BlogTitle>
+          Really, really long blog post title 2: revenge of the sith 4:
+          awakening in 3d
+        </BlogTitle>
 
         <p className="mb-4">
           this is an excerpt. Lorem ipsum dolor sit amet consectetur adipisicing
@@ -35,12 +39,7 @@ const FeaturedPost = ({ className, children }) => {
           asperiores laborum quos eius ea delectus quo numquam quia totam quasi,
           eos dolor. Velit, labore!
         </p>
-        <a
-          className="uppercase font-mono text-purple-600 p-2 m-1 border-purple-600 border-solid border block flex-shrink"
-          href=""
-        >
-          read more >>
-        </a>
+        <Button>read more >></Button>
       </FeaturedPostWords>
     </div>
   )
