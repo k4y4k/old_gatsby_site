@@ -1,14 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { Link } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-const SkipHero = ({ className, children }) => {
-  return (
-    <div id="skip" className={className}>
-      <Link to="/projects">Skip to Projects</Link>
-    </div>
-  )
-}
+const SkipHero = ({ className }) => (
+  <div id="skip" className={className}>
+    <Link to="/projects">Skip to Projects</Link>
+  </div>
+);
 
 const StyledSkipHero = styled(SkipHero)`
   a {
@@ -24,6 +22,6 @@ const StyledSkipHero = styled(SkipHero)`
     padding: 3px;
     background-color: #fff;
   }
-`
+`;
 
-export default StyledSkipHero
+export default StyledSkipHero;

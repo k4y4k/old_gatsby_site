@@ -21,12 +21,26 @@
     "tailwindcss": "1.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "8.3.5",
+    "@commitlint/config-conventional": "8.3.4",
+    "@commitlint/prompt-cli": "8.3.5",
     "@testing-library/cypress": "5.2.1",
     "axe-core": "3.4.1",
     "cypress": "3.8.3",
     "cypress-axe": "0.5.3",
+    "eslint": "6.1.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-plugin-cypress": "2.9.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.18.3",
+    "eslint-plugin-react-hooks": "1.7.0",
     "gh-pages": "2.2.0",
+    "husky": "4.2.1",
+    "lint-staged": "10.0.7",
     "prettier": "1.19.1",
+    "prettier-eslint": "9.0.1",
+    "prettier-eslint-cli": "5.0.0",
     "start-server-and-test": "1.10.8"
   },
   "scripts": {
@@ -39,6 +53,19 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
     "test:e2e:ci": "start-server-and-test develop http://localhost:8000 cy:run",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "deploy": "gatsby build && gh-pages -d public -b master",
+    "commit": "commit",
+    "format": "prettier-eslint \"src/**/*.js\""
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "prettier-eslint --config .prettierrc.json --write",
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

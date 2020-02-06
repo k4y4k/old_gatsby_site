@@ -7,7 +7,7 @@ module.exports = {
         'Menlo',
         'Courier New',
         'Courier',
-        'monospace'
+        'monospace',
       ],
       sans: [
         'Inter',
@@ -19,10 +19,10 @@ module.exports = {
         'Cantarell',
         'Open Sans',
         'Helvetica Neue',
-        'sans-serif'
-      ]
-    }
+        'sans-serif',
+      ],
+    },
   },
   variants: {},
-  plugins: []
-}
+  plugins: [],
+};
