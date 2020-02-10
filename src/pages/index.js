@@ -6,16 +6,19 @@ import Hero from '../components/Hero/Hero';
 
 export default () => (
   <>
+    <Helmet>
+      <html lang="en" amp />
+      <meta charSet="utf-8" />
+      <title>{'<kayak />'}</title>
+      <link rel="canonical" href="https://kayak.rocks" />
+    </Helmet>
     <header>
-      <Helmet>
-        <html lang="en" amp />
-        <meta charSet="utf-8" />
-        <title>{'<kayak />'}</title>
-        <link rel="canonical" href="https://kayak.rocks" />
-      </Helmet>
+      <Hero />
     </header>
     <main>
-      <Hero />
+      <h1 className="uppercase font-mono font-4xl text-center">
+        main content here
+      </h1>
     </main>
   </>
 );
