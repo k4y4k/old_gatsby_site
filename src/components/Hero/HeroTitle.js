@@ -9,6 +9,10 @@ const UnstyledHeroTitle = ({ className }) => (
 const HeroTitle = styled(UnstyledHeroTitle)`
   max-width: 1200px;
   width: 66vw;
+  transition: 0.5s ease-in-out all;
+  &:hover {
+    filter: invert(0.5) sepia(1) hue-rotate(200deg) saturate(4) brightness(1);
+  }
 `;
 
 export default HeroTitle;
