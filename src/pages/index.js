@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/tailwind.css';
 import '../styles/fonts.scss';
+import Hero from '../components/Hero/Hero';
 
 export default () => (
   <>
@@ -14,7 +15,7 @@ export default () => (
       </Helmet>
     </header>
     <main>
-      <h1 className="font-mono text-4xl">forgo(tten).</h1>
+      <Hero />
     </main>
   </>
 );
