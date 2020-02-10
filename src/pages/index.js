@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/tailwind.css';
 import '../styles/fonts.scss';
-import Hero from '../components/Hero/Hero';
-import Projects from '../components/Projects/Projects';
-import Blog from '../components/Blog/Blog';
 
 export default () => (
   <>
@@ -12,15 +9,12 @@ export default () => (
       <Helmet>
         <html lang="en" amp />
         <meta charSet="utf-8" />
-        <title>{'Coming Soon | <kayak />'}</title>
+        <title>{'<kayak />'}</title>
         <link rel="canonical" href="https://kayak.rocks" />
       </Helmet>
-      <Hero />
     </header>
     <main>
-      <Projects />
-
-      <Blog />
+      <h1 className="font-mono text-4xl">forgo(tten).</h1>
     </main>
   </>
 );
