@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-const tooLongClassNames = [
+const ulClassNames = [
   'list-none',
   'flex',
   'flex-wrap',
@@ -13,7 +13,7 @@ const tooLongClassNames = [
 
 const UnstyledHeroNav = () => (
   <nav className="m-8">
-    <ul className={tooLongClassNames.join(' ')}>
+    <ul className={ulClassNames.join(' ')}>
       <li>
         <Link className="p-2 px-4 m-2" to="#work">
           Work

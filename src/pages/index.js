@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import '../styles/tailwind.css';
 import '../styles/fonts.scss';
 import Hero from '../components/Hero/Hero';
+import SkipLink from '../components/SkipLink/SkipLink';
 
 export default () => (
   <>
@@ -13,9 +14,10 @@ export default () => (
       <link rel="canonical" href="https://kayak.rocks" />
     </Helmet>
     <header>
+      <SkipLink />
       <Hero />
     </header>
-    <main>
+    <main id="main">
       <h1 className="uppercase font-mono font-4xl text-center">
         main content here
       </h1>
