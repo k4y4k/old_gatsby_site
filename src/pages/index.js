@@ -21,6 +21,8 @@ export default () => (
       <h1 className="uppercase font-mono font-4xl text-center">
         main content here
       </h1>
+      <div id="work" />
+      <div id="hire" />
     </main>
   </>
 );
