@@ -7,6 +7,16 @@ describe('The site in general', () => {
   });
 });
 
+describe('the work section', () => {
+  it('should have a title image', () => {
+    cy.get('#work').find('img');
+  });
+
+  it('should have a place for my nice project showcase', () => {
+    cy.get('#work').find('#work-container');
+  });
+});
+
 describe('the hero section', () => {
   it('should have a nice image', () => {
     cy.get('#hero').find('img');

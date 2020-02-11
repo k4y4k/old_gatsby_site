@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const classes = ['mx-auto', 'bg-purple-600'];
 
 const UnstyledWorkContainer = ({ className }) => (
-  <div className={`${className} ${classes.join(' ')}`}>
+  <div className={`${className} ${classes.join(' ')}`} id="work-container">
     <h1 className="text-white p-4 text-center">WorkContainer component</h1>
   </div>
 );
