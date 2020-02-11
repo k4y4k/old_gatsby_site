@@ -7,6 +7,20 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        // Plugins configs
+        plugins: [],
+      },
+    },
     'gatsby-plugin-sass',
     'gatsby-plugin-postcss',
     {
