@@ -4,6 +4,7 @@ import '../styles/tailwind.css';
 import '../styles/fonts.scss';
 import Hero from '../components/Hero/Hero';
 import SkipLink from '../components/SkipLink/SkipLink';
+import Work from '../components/Work/Work';
 
 export default () => (
   <>
@@ -18,10 +19,7 @@ export default () => (
       <Hero />
     </header>
     <main id="main">
-      <h1 className="uppercase font-mono font-4xl text-center">
-        main content here
-      </h1>
-      <div id="work" />
+      <Work />
       <div id="hire" />
     </main>
   </>
