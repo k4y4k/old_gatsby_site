@@ -1,9 +1,10 @@
 {
-  "updateTypes": ["minor", "patch", "pin", "digest"],
-  "automerge": true,
-  "major": {
-    "automerge": false
-  },
+  "extends": [
+    "config:base",
+    ":maintainLockFilesWeekly",
+    ":automergeAll",
+    ":automergeBranchPush"
+  ],
   "requiredStatusChecks": null,
   "masterIssueApproval": true
 }
