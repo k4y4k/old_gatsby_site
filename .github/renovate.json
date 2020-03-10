@@ -2,8 +2,7 @@
   "extends": [
     "config:base",
     ":maintainLockFilesWeekly",
-    ":automergeAll",
-    ":automergeBranchPush"
+    ":automergeAll"
   ],
   "requiredStatusChecks": null,
   "masterIssueApproval": true
